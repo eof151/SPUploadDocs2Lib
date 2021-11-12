@@ -28,7 +28,7 @@ namespace SPUploadDocs2Lib
             CreateFiles(false);
         }
 
-        /// <summary> Создать набор файлов определенного типа
+        /// <summary>Создать набор файлов определенного типа
         /// </summary>
         /// <param name="isWord">флаг типа файла</param>
         private void CreateFiles(bool isWord)
@@ -70,7 +70,7 @@ namespace SPUploadDocs2Lib
         private void GenerateFile(SPList myList, bool isWord)
         {
             SPListItem item = null;
-            string documentName = "";
+            string documentName = String.Empty;
             MemoryStream docStream = new MemoryStream();
             StreamWriter writer = new StreamWriter(docStream);
 
