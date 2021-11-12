@@ -74,7 +74,7 @@ namespace SPUploadDocs2Lib
             MemoryStream docStream = new MemoryStream();
             StreamWriter writer = new StreamWriter(docStream);
 
-            if (isWord) //Word
+            if (isWord)//Word
             {
                 documentName = GeneratePartFileName(tbFilenamePref.Text, WORDFILE);
                 DocumentBuilder.GenerateWordDocument(docStream, tbWordText.Text);
@@ -89,7 +89,7 @@ namespace SPUploadDocs2Lib
             writer.Flush();
             item = file.Item;
             //Заполняем свойство - Название
-            item["Title"] = "TestFile" + item.ID;
+            item["Title"] = "TestFile_" + item.ID;
             item.Update();
         }
 
